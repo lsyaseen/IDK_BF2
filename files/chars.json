@@ -1,0 +1,90 @@
+[
+{
+    "id":0,
+    "name":"Luke Skywalker"
+},
+{
+    "id":1,
+    "name":"Leia Organa"
+},
+{
+    "id":2,
+    "name":"Han Solo"
+},
+{
+    "id":3,
+    "name":"Chewbacca"
+},
+{
+    "id":4,
+    "name":"Lando Calrissian"
+},
+{
+    "id":5,
+    "name":"Anakin Skywalker"
+},
+{
+    "id":6,
+    "name":"Obi-Wan Kenobi"
+},
+{
+    "id":7,
+    "name":"Yoda"
+},
+{
+    "id":8,
+    "name":"Rey"
+},
+{
+    "id":9,
+    "name":"Finn"
+},
+{
+    "id":10,
+    "name":"BB-8"
+},
+{
+    "id":11,
+    "name":"Bobba Fett"
+},
+{
+    "id":12,
+    "name":"بصق"
+},
+{
+    "id":13,
+    "name":"Darth Vader"
+},
+{
+    "id":14,
+    "name":"Palpatine"
+},
+{
+    "id":15,
+    "name":"Iden Versio"
+},
+{
+    "id":16,
+    "name":"Kylo Ren"
+},
+{
+    "id":17,
+    "name":"Darth Maul"
+},
+{
+    "id":18,
+    "name":"Captain Phasma"
+},
+{
+    "id":19,
+    "name":"General Grievous"
+},
+{
+    "id":20,
+    "name":"BB-9E"
+},
+{
+    "id":21,
+    "name":"Count Duko"
+}
+]

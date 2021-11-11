@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+<title>I dont know..</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-5.0.2-dist/css/bootstrap.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <form class="col-12" method="POST">
+            <div class="row">
+              <div class="display-6 p-3 mb-4 col d-flex justify-content-center">Which Star Wars Battlefront 2 Character?</div>
+            </div>
+              <div class="row justify-content-center">
+                <div class="col-4">
+                  <h2>Light Side</h2>
+                  <p>{{c1}}</p>
+                  <p>{{c2}}</p>
+                  <p>{{c3}}</p>
+                  <p>{{c4}}</p>
+                </div>
+                <div class="col-2">
+                  <h2>Dark Side</h2>
+                      <p>{{c5}}</p>
+                      <p>{{c6}}</p>
+                      <p>{{c7}}</p>
+                      <p>{{c8}}</p>
+                </div>
+              </div>
+            <div class="row">
+              <div class="form-group col d-flex justify-content-center">
+                <a class="btn btn-light"href="{{ url_for('main') }}">Shuffle</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+</body>
+</html>
