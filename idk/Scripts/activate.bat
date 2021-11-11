@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\lyase\Desktop\Randomizer\idk
+set VIRTUAL_ENV=C:\Users\lyase\OneDrive\03_Development\IDK_BF2\idk
 
 if not defined PROMPT set PROMPT=$P$G
 

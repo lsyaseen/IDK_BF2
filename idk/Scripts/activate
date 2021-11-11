@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\lyase\Desktop\Randomizer\idk"
+VIRTUAL_ENV="C:\Users\lyase\OneDrive\03_Development\IDK_BF2\idk"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
