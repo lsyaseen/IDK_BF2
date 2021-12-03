@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import random
 from random import randint
 import json
 app = Flask(__name__)
@@ -11,16 +12,17 @@ def main():
         data = f.read()
         chars = json.loads(data)
     # Light Side Random Numbers
-    rand1 = randint(0,9)
-    rand2 = randint(0,9)
-    rand3 = randint(0,9)
-    rand4 = randint(0,9)
+    num = random.sample(range(0, 9), 4)
+    rand1 = num[0]
+    rand2 = num[1]
+    rand3 = num[2]
+    rand4 = num[3]
     c1 = [row for row in chars if(row['id'] == rand1)]
     c2 = [row for row in chars if(row['id'] == rand2)]
     c3 = [row for row in chars if(row['id'] == rand3)]
     c4 = [row for row in chars if(row['id'] == rand4)]
 
-    # Light Side Random Numbers
+    # Dark Side Random Numbers
     rand5 = randint(11,21)
     rand6 = randint(11,21)
     rand7 = randint(11,21)
