@@ -2,3 +2,14 @@ body {
     color: #d9ffff;
     background-color: #262626;
   }
+
+.card-body-color-light {
+  color: rgb(153, 250, 250);
+   background-color: #262626 !important;
+}
+
+
+.card-body-color-dark {
+  color:#ff4f4f;
+   background-color: #262626 !important;
+}

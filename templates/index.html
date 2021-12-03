@@ -6,7 +6,42 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div class="container h-100">
+  <div class="vh-100 d-flex justify-content-center align-items-center">
+    <form method="POST">
+      <div class="row">
+        <div class="display-6 mb-4 col d-flex justify-content-center">Which Star Wars Battlefront 2 Character?</div>
+      </div>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <div class="card" style="width:400px">
+              <div class="card-body card-body-color-light">
+                <h4 class="card-title">Light Side</h4>
+                    <p>{{c1}}</p>
+                    <p>{{c2}}</p>
+                    <p>{{c3}}</p>
+                    <p>{{c4}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card" style="width:400px">
+              <div class="card-body card-body-color-dark">
+                <h4 class="card-title">Dark Side</h4>
+                <p>{{c5}}</p>
+                <p>{{c6}}</p>
+                <p>{{c7}}</p>
+                <p>{{c8}}</p>
+          </div>
+              </div>
+            </div>
+            <div class="form-group col d-flex justify-content-center mt-5">
+              <a class="btn btn-light"href="{{ url_for('main') }}">Shuffle</a>
+          </div>
+          </div>
+        </div>
+    </form>
+  </div>
+    <!-- <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
           <form class="col-12" method="POST">
             <div class="row">
@@ -35,7 +70,7 @@
             </div>
           </form>
         </div>
-      </div>
+      </div> -->
 
 </body>
 </html>
