@@ -23,10 +23,11 @@ def main():
     c4 = [row for row in chars if(row['id'] == rand4)]
 
     # Dark Side Random Numbers
-    rand5 = randint(11,21)
-    rand6 = randint(11,21)
-    rand7 = randint(11,21)
-    rand8 = randint(11,21)
+    num2 = random.sample(range(10, 21), 4)
+    rand5 = num2[0]
+    rand6 = num2[1]
+    rand7 = num2[2]
+    rand8 = num2[3]
     c5 = [row for row in chars if(row['id'] == rand5)]
     c6 = [row for row in chars if(row['id'] == rand6)]
     c7 = [row for row in chars if(row['id'] == rand7)]
