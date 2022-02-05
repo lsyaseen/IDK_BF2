@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="icon" href="../static/assets/brand/favicon.ico" type="image/x-icon">
+    <title>Hello World</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='assets/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+
+    <script type=text/javascript src="{{
+      url_for('static', filename='js/d3.min.js') }}"></script>
+
+    <script type=text/javascript src="{{
+      url_for('static', filename='jquery-3.6.0.min.js') }}"></script>
+      <!-- TODO: move this to the custom css -->
+
+</head>
+
+<body>
+    <header class="header">
+      Something here
+    </header>
+    {%block content%}
+    {%endblock%}
+</body>
+
+      <script src="../static/assets/dist/js/bootstrap.bundle.min.js"></script>
+      <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+      </script>
+</html>

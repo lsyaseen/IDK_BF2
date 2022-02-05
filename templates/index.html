@@ -1,16 +1,178 @@
 <!DOCTYPE html>
 <head>
-<title>I dont know..</title>
+<!-- <title>I dont know..</title> -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-5.0.2-dist/css/bootstrap.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
 </head>
 <body>
+
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#">Super Smash Brothers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Star Wars Battlefront 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">GTA V</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Call of Duty Warzone</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+  
+    <!-- Jumbotron -->
+    <div class="p-5 bg-dark">
+      <form action="/addPlayer" method="POST">
+        <div class="mb-3">
+          <h3>Add new player</h3>
+          <div class="row">
+            <div class="col">
+              <input name="text" class=form-control id="newPlayer">
+            </div>
+            <div class="col">
+              <input type="submit" class="btn btn-primary" value="Add">
+            </div>
+          </div>
+        </div>
+    </form>
+    <div class="mb-3">
+      <form action="/resetPlayers" method="post">
+        <button name="resetBtn" type="submit" class="btn btn-primary">Reset Players</button>
+    </form>
+    </div>
+    <div class="mb-3">
+      <form action="/resetChars" method="post">
+        <button name="resetBtn" type="submit" class="btn btn-primary">Reset Chars</button>
+    </form>
+    </div>
+    </div>
+    <!-- Jumbotron -->
+  </header>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="display-6 mb-4 col d-flex justify-content-center">Which Star Wars Battlefront 2 Character?</div>
+    </div>
+    <div class="row mt-5 text-center">
+      <div class="col">
+        <h4>{{ players[0] }}</h4>
+      </div>
+      <div class="col">
+        <h4>{{ players[1] }}</h4>
+      </div>
+      <div class="col">
+        <h4>{{ players[2] }}</h4>
+      </div>
+      <div class="col">
+        <h4>{{ players[3] }}</h4>
+      </div>
+    </div>
+    <div class="row mt-3 text-center">
+      <div class="col">
+        <div class="row">
+      <div class="col">
+        <ul>
+          {% for char in player1LightChars %}
+              <li>{{ char.name }}</li>
+          {% endfor %}
+          </ul>
+      </div>
+      <div class="col">
+        <ul>
+          {% for char in player2LightChars %}
+              <li>{{ char.name }}</li>
+          {% endfor %}
+          </ul>
+      </div>
+      <div class="col">
+        <ul>
+          {% for char in player3LightChars %}
+              <li>{{ char.name }}</li>
+          {% endfor %}
+          </ul>
+      </div>
+      <div class="col">
+        <ul>
+          {% for char in player4LightChars %}
+              <li>{{ char.name }}</li>
+          {% endfor %}
+          </ul>
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="row mt-3 text-center">
+      <div class="col">
+        <div class="row">
+      <div class="col">
+        <ul>
+          {% for char in player1DarkChars %}
+              <li>{{ char.name }}</li>
+          {% endfor %}
+          </ul>
+      </div>
+      <div class="col">
+        <ul>
+          {% for char in player2DarkChars %}
+              <li>{{ char.name }}</li>
+          {% endfor %}
+          </ul>
+      </div>
+      <div class="col">
+        <ul>
+          {% for char in player3DarkChars %}
+              <li>{{ char.name }}</li>
+          {% endfor %}
+          </ul>
+      </div>
+      <div class="col">
+        <ul>
+          {% for char in player4DarkChars %}
+              <li>{{ char.name }}</li>
+          {% endfor %}
+          </ul>
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <form action="/shuffleLightSide" method="post">
+        <button name="shuffleBtnLight" type="submit" class="btn btn-primary">Light Side Shuffle</button>
+    </form>
+    </div>
+    <div class="mb-3">
+      <form action="/shuffleDarkSide" method="post">
+        <button name="shuffleBtnDark" type="submit" class="btn btn-primary">Dark Side Shuffle</button>
+    </form>
+    </div>
+  </div>
+
+  <div class="container">
   <div class="vh-100 d-flex justify-content-center align-items-center">
     <form method="POST">
-      <div class="row">
-        <div class="display-6 mb-4 col d-flex justify-content-center">Which Star Wars Battlefront 2 Character?</div>
-      </div>
         <div class="row justify-content-center">
           <div class="col-6">
             <div class="card" style="width:400px">
@@ -38,8 +200,11 @@
               <a class="btn btn-light"href="{{ url_for('main') }}">Shuffle</a>
           </div>
           </div>
-        </div>
     </form>
   </div>
+  </div>
 </body>
+
+<script src="{{ url_for('static', filename='js/update.js') }}"></script>
+
 </html>
